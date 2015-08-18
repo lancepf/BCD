@@ -10,15 +10,31 @@
 </head>
 
 <body>
-<header><img src="https://cloud.githubusercontent.com/assets/12433542/7968803/13367e3e-09f0-11e5-9d9d-fcb8cc8b2bc1.png" class="logo"></header>	
-<article>
+<header><center>Breast Cancer Dashboard</center></header>
+<BR>
+<BR>
 
-<span class="required_notification">* Required fields</span>
-<br>
-<br>
+<h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+
+<div style="width:100%;height:50px;"></div>
+
+<img src="resources/HCI.jpg" class="displayed">
+
+<div style="width:100%;height:50px;"></div>
+
+<input class="start" type="button" value="START" onClick="document.getElementById('Masterdiv').scrollIntoView();">
+
+<div style="width:100%;height:800px;"></div>
+
+
+<div id="Masterdiv"></div>
+
+<article>
+<header>Breast Cancer Dashboard</header>
+<BR>
+<BR>
 <fieldset>
-  <legend><h2>Patient</h2></legend>
-  <br>
+  
   <form class="bcd_form" action="" method="get" > 
   <script>
   var form = document.querySelector("form");
@@ -27,34 +43,43 @@
     event.preventDefault();
   });
 </script>
-    Age: <input type="text" name="age" size="2" value=""> 
-    Menopause: <input type="text" size="2" name="menopause" value="">
-    <br>
-    BRCA: <input type="text" name="familyHistory" size="2" value="">
-    Family History: <select name="familyHistory" value="">
-    	<option value=""> </option>
-    	<option value="Yes">Yes</option>
-    	<option value="No">No</option>
-    	</select>
-    <br>
-    Breast density: <input type="text" name="breastDensity" size="2" value="">
-    </fieldset>
+<legend><h2>Patient Information</h2></legend>
+    <table>
+	<tr>	
+		<th class = "top" style="width:15%">AGE</th>		
+		<th class="top-grey" style="width:15%">MENOPAUSE</th>
+		<th class="top-grey" style="width:20%">BRCA</th>
+		<th class="top-grey" style="width:30%">FAMILY HISTORY</th>	
+		<th class="top-grey-right" style="width:20%">BREAST DENSITY</th>
+	</tr>
+	<tr>
+		<td class="left"><input type="text" name="age" size="10" value=""></td>
+		<td class="bottom"><!--<input type="text" size="2" name="menopause" value="">--></td>
+		<td class="bottom"><!--<input type="text" size="2" name="BRCA" value="">--></td>
+		<td class="bottom"><!--<input type="text" name="familyHistory" size="2" value="">--></td>
+		<td class="right"><!--<input type="text" name="breastDensity" size="2" value="">--></td>
+	</tr>	
+</table>
   <br>
   <br>
-  <fieldset>
-  <legend><h2>Tumor</h2></legend>
-  <br>
-    Stage<span class="asterisk">*</span>: <select name="Stage.Group.pathology" required>
-    	<option value="">Please select below</option>
+  <legend><h2>Tumor Information</h2></legend>
+  <table>
+	<tr>	
+		<th class = "top" style="width:25%">STAGE</th>		
+		<th class="top" style="width:15%">PRIMARY TUMOR (T)</th>
+		<th class="top" style="width:15%">NUMER OF NODES</th>
+		<th class="top-right" style="width:20%">REGIONAL LYMPH NODES (N)</th>	
+	</tr>
+	<tr>
+		<td class="left"><select type="text" name="Stage.Group.pathology" value="">
+		<option value=""></option>
         <option value="Stage I">Stage I (Stage IA, Stage IB)</option>
         <option value="Stage II">Stage II (Stage IIA, Stage IIB)</option>
         <option value="Stage III">Stage III (Stage IIA, Stage IIB, Stage IIC)</option>
-        <option value="Stage IV">Stage IV</option>
-        </select>
-        <br>
-    Primary Tumor (T)<span class="asterisk">*</span>: <select name="Primary.tumor.pathology" required>
-    	<option value="">Please select below</option>
-        <option value="TX">TX</option>
+        <option value="Stage IV">Stage IV</option></td>
+		<td class="bottom"><select name="Primary.tumor.pathology">
+        <option value=""></option>
+		<option value="TX">TX</option>
         <option value="T0">T0</option>
         <option value="Tis">Tis</option>
         <option value="Tis DCIS">Tis (DCIS)</option>
@@ -64,69 +89,63 @@
         <option value="T2">T2</option>
         <option value="T3">T3</option>
         <option value="T4">T4</option>
-    </select>
-    <br>
-    <!--ER: <input type="text" name="er" value="">
-    <br>
-    
-    PR: <input type="text" name="pr" value="">
-    <br>
-    HER2: <input type="text" name="her2" value="">
-   -->
-    <br>
-    # positive nodes<span class="asterisk">*</span>: <input type="text"  value="" required>
-    <br>
-    <!--
-    Tumor diameter (cm): <input type="text" name="tumorDiameter" value="">
-    -->
-    <br>
-    Regional Lymph Nodes (N)<span class="asterisk">*</span>: <select name="Regional.lymph.nodes" required>
-    	<option value="none selected"> </option>
+    </select></td>
+		<td class="bottom"><input type="text" name="nodes" size="10" value=""></td>
+		<td class="right"><select name="Regional.lymph.nodes">
+		<option value="none selected"> </option>
         <option value="NX">NX</option>
         <option value="N0">N0</option>
         <option value="N1">N1</option>
         <option value="N2">N2</option>
         <option value="N3">N3</option>
-    </select>
-    <br>
-    Distant Metastasis (M)<span class="asterisk">*</span>: <select name="Distant.metastases.clinical" required>
-    	<option value=""> </option>
+    </select></td>
+	</tr>
+	</table>
+	<table>
+	<tr>		
+		<th style="width:20%">DISTANT METASTASIS (M)</th>		
+		<th style="width:15%">LATERALITY</th>
+		<th style="width:20%">HISTOLOGY TYPE</th>
+		<th style="width:15%">GRADE</th>	
+		<th class ="right" style="width:20%">CHARLSON COMORBIDIY INDEX</th>
+	</tr>
+	<tr>
+		<td class="left"><select name="Distant.metastases.clinical">
+		<option value=""> </option>
         <option value="M0">M0</option>
         <option value="M1">M1</option>
-    </select>
-    Laterality: <select name="Laterality">
-    	<option value=""> </option>
+    </select></td>
+		<td class="bottom"><select name="Laterality">
+		<option value=""> </option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
-    </select>
-    <br>
-    <br>
-    Histology type: <input type="text" name="histologyType" value="">
-    Grade: <select name="grade">
-    	<option value=""> </option>
+    </select></td>
+		<td class="bottom"><input type="text" name="histologyType" size="10" value=""></td>
+		<td class="bottom"><select name="grade">
+		<option value=""> </option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
-    </select>
-    <br>
-    <br>
-    Charlson Comorbidity Index (CCI): <input type="number" min="0" max="37" name="CCI">
-    <br>
-    <br>
-    Treatment: 
-    <br>
-    <ul>
-    <li><input type="checkbox" name="NoTreatment" value="No treatment">No treatment</li>
-    <br>
-    <li><input type="checkbox" name="Surgery" value="Surgery">Surgery</li>
-    <br>
-    <li><input type="checkbox" name="Radiation" value="Radiation therapy">Radiation therapy</li>
-    <br>
-    <li><input type="checkbox" name="chemo" value="Chemotherapy">Chemotherapy</li>
-    </ul>
-    </fieldset>
+    </select></td>
+		<td class="right"><input type="text" name="CCI" size="10" value=""></td>
+	</tr>
+	</table>
+	<table>
+	<tr>	
+		<th style="width:100%">TREATMENT<th>		
+	</tr>
+	<tr>
+	<td class="bottom"><select name="treatment">
+		<option value=""> </option>
+        <option value="1">No Treatment</option>
+        <option value="2">Surgery</option>
+        <option value="3">Radiation</option>
+        <option value="4">Chemotherapy</option>
+	</tr>
+</table>
+	
   <br>
   <br>
   <fieldset>
@@ -141,12 +160,13 @@
     </fieldset>
     <br>
     <br>
+	  <div style="width:100%;height:200px;"></div>
     <!--button class="print" type="button" onclick="makeInfoRequest(this.form);">Print</button-->
-	<input class="print" type="submit" name="launch" value="Launch" onclick="makeInfoRequest(this.form);"-->
+	<input class="start" type="submit" name="launch" value="Launch" onclick="makeInfoRequest(this.form);"-->
 	
   </form>
-  
   </article>
+
   <div class="bcd_graph" id="survivialGraph"></div>
   <input class="generalInfo" type="button" value="General Information">
   <div id="infoFrame"></div>
