@@ -208,7 +208,7 @@ ul li {
 }
 
 /* Button Style */
-input.print, input.generalInfo {
+input.start, input.generalInfo {
 	display: block;
 	margin-left: auto;
     margin-right: auto; 
@@ -226,12 +226,12 @@ input.print, input.generalInfo {
 	padding: 10px 50px 10px 50px;
 	text-decoration: none;
 }
-input.print:hover, input.generalInfo:hover {
+input.start:hover, input.generalInfo:hover {
     opacity:.85;
     cursor: pointer; 
 }
 
-input.print:active, input.generalInfo:active {
+input.start:active, input.generalInfo:active {
 	background: #72884E;
 	background-image: -webkit-linear-gradient(top, #72884E, #0f7809);
 	background-image: -moz-linear-gradient(top, #72884E, #0f7809);
