@@ -208,6 +208,7 @@ ul li {
 }
 
 /* Button Style */
+<<<<<<< HEAD
 input.start, input.generalInfo {
 	display: block;
 	margin-left: auto;
@@ -228,6 +229,32 @@ input.start, input.generalInfo {
 	text-decoration: none;
 }
 input.start:hover, input.generalInfo:hover {
+=======
+input.print, input.generalInfo {
+    background: #c12440; /* Old browsers */
+background: -moz-linear-gradient(top,  #c12440 0%, #e16077 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c12440), color-stop(100%,#e16077)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #c12440 0%,#e16077 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #c12440 0%,#e16077 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #c12440 0%,#e16077 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #c12440 0%,#e16077 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c12440', endColorstr='#e16077',GradientType=0 ); /* IE6-9 */
+
+    border: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+input.print:hover, input.generalInfo:hover {
+>>>>>>> origin/master
     opacity:.85;
     cursor: pointer; 
 }
