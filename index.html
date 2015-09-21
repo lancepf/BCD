@@ -33,7 +33,6 @@
 <header>Breast Cancer Dashboard</header>
 <BR>
 <BR>
-<fieldset>
   
   <form class="bcd_form" action="" method="get" > 
   <script>
@@ -53,7 +52,7 @@
 		<th class="top-grey-right" style="width:20%">BREAST DENSITY</th>
 	</tr>
 	<tr>
-		<td class="left"><input type="text" name="age" size="10" value=""></td>
+		<td class="left"><input type="text" name="Age.Group.Clinical" size="10" value=""></td>
 		<td class="bottom"><!--<input type="text" size="2" name="menopause" value="">--></td>
 		<td class="bottom"><!--<input type="text" size="2" name="BRCA" value="">--></td>
 		<td class="bottom"><!--<input type="text" name="familyHistory" size="2" value="">--></td>
@@ -66,98 +65,101 @@
   <table>
 	<tr>	
 		<th class = "top" style="width:25%">STAGE</th>		
-		<th class="top" style="width:15%">PRIMARY TUMOR (T)</th>
-		<th class="top" style="width:15%">NUMER OF NODES</th>
-		<th class="top-right" style="width:20%">REGIONAL LYMPH NODES (N)</th>	
+		<th class="top" style="width:25%">CHARLSON COMORBIDITY INDEX (CCI) </th>
+		<th class="top-grey" style="width:20%">NUMER OF NODES</th>
+		<th class="top-grey-right" style="width:20%">REGIONAL LYMPH NODES (N)</th>	
 	</tr>
 	<tr>
 		<td class="left"><select type="text" name="Stage.Group.pathology" value="">
 		<option value=""></option>
-        <option value="Stage I">Stage I (Stage IA, Stage IB)</option>
-        <option value="Stage II">Stage II (Stage IIA, Stage IIB)</option>
-        <option value="Stage III">Stage III (Stage IIA, Stage IIB, Stage IIC)</option>
-        <option value="Stage IV">Stage IV</option></td>
-		<td class="bottom"><select name="Primary.tumor.pathology">
-        <option value=""></option>
-		<option value="TX">TX</option>
-        <option value="T0">T0</option>
-        <option value="Tis">Tis</option>
-        <option value="Tis DCIS">Tis (DCIS)</option>
-        <option value="Tis LCIS">Tis (LCIS)</option>
-        <option value="Tis Paget">Tis (Paget's)</option>
-        <option value="T1">T1</option>
-        <option value="T2">T2</option>
-        <option value="T3">T3</option>
-        <option value="T4">T4</option>
+        <option value="Stage I">Stage I </option>
+        <option value="Stage II">Stage II </option>
+        <option value="Stage III">Stage III </option>
+        <option value="Stage IV">Stage IV </option></td>
+		<td class="bottom"><select name="CCI.clinical">
+		<option value=""></option>
+        <option value="Zero">Zero</option>
+		<option value="Low">Low</option>
+        <option value="Med">Medium</option>
+        <option value="High">High</option>
     </select></td>
-		<td class="bottom"><input type="text" name="nodes" size="10" value=""></td>
-		<td class="right"><select name="Regional.lymph.nodes">
-		<option value="none selected"> </option>
-        <option value="NX">NX</option>
-        <option value="N0">N0</option>
-        <option value="N1">N1</option>
-        <option value="N2">N2</option>
-        <option value="N3">N3</option>
+		<td class="bottom"><!--input type="text" name="nodes" value=""!--></td>
+		<td class="right"><!--select name="Regional.lymph.nodes"-->
+		<!--option value="none selected"> </option-->
+        <!--option value="NX">NX</option-->
+        <!--option value="N0">N0</option-->
+        <!--option value="N1">N1</option-->
+        <!--option value="N2">N2</option-->
+        <!--option value="N3">N3</option-->
     </select></td>
 	</tr>
 	</table>
 	<table>
 	<tr>		
-		<th style="width:20%">DISTANT METASTASIS (M)</th>		
-		<th style="width:15%">LATERALITY</th>
-		<th style="width:20%">HISTOLOGY TYPE</th>
-		<th style="width:15%">GRADE</th>	
-		<th class ="right" style="width:20%">CHARLSON COMORBIDIY INDEX</th>
+		<th class ='left-grey' style="width:20%">DISTANT METASTASIS (M)</th>		
+		<th class = 'middle-grey' style="width:15%">LATERALITY</th>
+		<th class = 'middle-grey' style="width:20%">HISTOLOGY TYPE</th>
+		<th class = 'middle-grey' style="width:15%">GRADE</th>	
+		<th class ="right-grey" style="width:20%">PRIMARY TUMOR (T)</th>
 	</tr>
 	<tr>
-		<td class="left"><select name="Distant.metastases.clinical">
+		<td class="left"><!--select name="Distant.metastases.clinical"-->
 		<option value=""> </option>
-        <option value="M0">M0</option>
-        <option value="M1">M1</option>
+        <!--option value="M0">M0</option-->
+        <!--option value="M1">M1</option-->
     </select></td>
-		<td class="bottom"><select name="Laterality">
+		<td class="bottom"><!--select name="Laterality"-->
 		<option value=""> </option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
+        <!--option value="0">0</option-->
+        <!--option value="1">1</option-->
+        <!--option value="2">2</option-->
     </select></td>
-		<td class="bottom"><input type="text" name="histologyType" size="10" value=""></td>
-		<td class="bottom"><select name="grade">
-		<option value=""> </option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
+		<td class="bottom"><!--input type="text" name="histologyType" size="10" value=""--></td>
+		<td class="bottom"><!--select name="grade"-->
+		<!--option value=""> </option-->
+        <!--option value="1">1</option-->
+        <!--option value="2">2</option-->
+        <!--option value="3">3</option-->
+        <!--option value="4">4</option-->
     </select></td>
-		<td class="right"><input type="text" name="CCI" size="10" value=""></td>
+		<td class="right"><!--select name="Regional.lymph.nodes"-->
+		<!--option value="none selected"> </option-->
+        <!--option value="NX">NX</option-->
+        <!--option value="N0">N0</option-->
+        <!--option value="N1">N1</option-->
+        <!--option value="N2">N2</option-->
+        <!--option value="N3">N3</option-->
+	</select></td>
 	</tr>
 	</table>
 	<table>
 	<tr>	
-		<th style="width:100%">TREATMENT<th>		
+		<th class="bottom-full-grey" >TREATMENT</th>		
 	</tr>
 	<tr>
-	<td class="bottom"><select name="treatment">
+	<td class="bottom-full" ><!--select name="treatment"-->
 		<option value=""> </option>
-        <option value="1">No Treatment</option>
-        <option value="2">Surgery</option>
-        <option value="3">Radiation</option>
-        <option value="4">Chemotherapy</option>
+        <!--option value="1">No Treatment</option-->
+        <!--option value="2">Surgery</option-->
+        <!--option value="3">Radiation</option-->
+        <!--option value="4">Chemotherapy</option-->
 	</tr>
 </table>
 	
   <br>
   <br>
-  <fieldset>
   <legend><h2>Assessment Scores</h2></legend>
-  <br>
-    OncotypeDx: <input type="text" name="Oncotype" size="2" value="">
-    PAM50: <input type="text" name="pam50" size="2" value="">
-    <br>
-    <br>
-    MammaPrint: <input type="text" name="mammaPrint" size="2" value="">
-    Adjuvant!: <input type="text" name="adjuvant" size="2" value="">
-    </fieldset>
+  <table>
+	<tr>
+		<th class="top-full-grey" style="width:15%">OncotypeDx<input type="checkbox" onclick="return false;" disabled="disabled"/></th>
+		<th class="top-full-grey">PAM50<input type="checkbox" onclick="return false;" disabled="disabled"/></th>
+	</tr>
+	<tr>
+		<th class="bottom-full-grey">MammaPrint<input type="checkbox" onclick="return false;" disabled="disabled"/></th>
+		<th class="bottom-full-grey">Adjuvant<input type="checkbox" onclick="return false;" disabled="disabled"/></th>
+	</tr>
+	</table>
+	<br>
     <br>
     <br>
 	  <div style="width:100%;height:200px;"></div>
