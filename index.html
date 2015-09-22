@@ -6,6 +6,11 @@
   <script src="JS/d3/d3.js"></script>
   
   <script src="JS/BCD_currentDraft.js"></script>
+   <script>
+        function showImg() {
+            document.getElementById("testImg").style.display = "";
+        }
+    </script>
 
 </head>
 
@@ -104,32 +109,32 @@
 	</tr>
 	<tr>
 		<td class="left"><!--select name="Distant.metastases.clinical"-->
-		<option value=""> </option>
+		<!--option value=""> </option-->
         <!--option value="M0">M0</option-->
         <!--option value="M1">M1</option-->
     </select></td>
 		<td class="bottom"><!--select name="Laterality"-->
-		<option value=""> </option>
+		<!--option value=""> </option-->
         <!--option value="0">0</option-->
         <!--option value="1">1</option-->
         <!--option value="2">2</option-->
     </select></td>
 		<td class="bottom"><!--input type="text" name="histologyType" size="10" value=""--></td>
-		<td class="bottom"><!--select name="grade"-->
+		<td class="bottom"><!--select name="grade">
 		<!--option value=""> </option-->
         <!--option value="1">1</option-->
         <!--option value="2">2</option-->
         <!--option value="3">3</option-->
         <!--option value="4">4</option-->
     </select></td>
-		<td class="right"><!--select name="Regional.lymph.nodes"-->
-		<!--option value="none selected"> </option-->
-        <!--option value="NX">NX</option-->
-        <!--option value="N0">N0</option-->
-        <!--option value="N1">N1</option-->
-        <!--option value="N2">N2</option-->
-        <!--option value="N3">N3</option-->
-	</select></td>
+		<td class="bottom-right"><!--select name="Regional.lymph.nodes">
+		<option value="none selected"> </option>
+        <option value="NX">NX</option>
+        <option value="N0">N0</option>
+        <option value="N1">N1</option>
+        <option value="N2">N2</option>
+        <option value="N3">N3</option>
+	</select--></td>
 	</tr>
 	</table>
 	<table>
@@ -164,8 +169,9 @@
     <br>
 	  <div style="width:100%;height:200px;"></div>
     <!--button class="print" type="button" onclick="makeInfoRequest(this.form);">Print</button-->
-	<input class="start" type="submit" name="launch" value="Launch" onclick="makeInfoRequest(this.form);"-->
-	
+	<!--input class="start" type="submit" name="launch" value="Launch" onclick="makeInfoRequest(this.form);"-->
+	<img id="testImg" src="resources/Stage1_Low_age65-74.png" style="display: none;" width="800" height="800"/>
+    <input class="start" type="submit" id="Map" value="Launch" onclick="showImg()" onClick="document.getElementById('bcd_graph').scrollIntoView();/>
   </form>
   </article>
 

@@ -108,6 +108,15 @@ td.bottom{
 	border-bottom: 1px solid #cdbfbc;
 	border-top: none;
 	color: #9C8079;
+	height:10px;
+}
+
+td.bottom-right{
+	border-bottom: 1px solid #cdbfbc;
+	border-top: none;
+	border-right:none;
+	color: #9C8079;
+	height:20px;
 }
 
 td.bottom-full{
@@ -116,6 +125,7 @@ td.bottom-full{
 	border-left: none;
 	border-top: none;
 	color: #cdbfbc;
+	height:20px;
 }
 
 td.right{
